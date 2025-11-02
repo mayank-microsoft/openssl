@@ -26,6 +26,7 @@
 #include <openssl/sha.h>
 #include <openssl/rand.h>
 #include <openssl/err.h>
+#include <openssl/opensslv.h>
 
 /* Print hex dump of binary data */
 static void print_hex(const char *label, const unsigned char *data, size_t len)

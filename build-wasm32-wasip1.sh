@@ -85,7 +85,7 @@ echo ""
 
 # Build
 echo -e "${YELLOW}Building OpenSSL...${NC}"
-make -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
+make -j$(nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || getconf _NPROCESSORS_ONLN 2>/dev/null || echo 1)
 
 echo ""
 echo -e "${GREEN}Build complete!${NC}"
